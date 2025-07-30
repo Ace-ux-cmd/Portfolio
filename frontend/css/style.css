@@ -1,0 +1,180 @@
+/* Reset browser defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Full-screen dark glowing background */
+body {
+  height: 100vh;
+  background: radial-gradient(circle at top left, #001f3f, #000814);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+/* Glowing login box */
+div {
+  background: rgba(0, 0, 20, 0.6);
+  border: 1px solid rgba(0, 191, 255, 0.4);
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #00bfff, 0 0 30px rgba(0, 191, 255, 0.3);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+/* Big '𝓐' logo */
+/* Small round logo */
+.logo {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  border: 2px solid #00bfff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: #00bfff;
+  position: relative;
+  overflow: hidden;
+  animation: float 6s ease-in-out infinite;
+  box-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
+}
+
+/* Gentle floating A inside */
+.logo::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 191, 255, 0.2) 20%, transparent 70%);
+  animation: waterFlow 6s linear infinite;
+  pointer-events: none;
+}
+
+/* Rippling waves effect */
+.logo::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.3);
+  animation: ripple 5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Float animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+    text-shadow: 0 0 10px #00bfff;
+  }
+  50% {
+    transform: translateY(-4px) rotate(1deg);
+    text-shadow: 0 0 15px #00ffff, 0 0 30px #00bfff;
+  }
+}
+
+/* Water flowing in background */
+@keyframes waterFlow {
+  0% {
+    transform: rotate(0deg) translateX(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: rotate(180deg) translateX(10px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: rotate(360deg) translateX(0);
+    opacity: 0.5;
+  }
+}
+
+/* Rippling border wave */
+@keyframes ripple {
+  0%, 100% {
+    box-shadow:
+      0 0 10px #00bfff,
+      0 0 15px #00bfff inset;
+  }
+  50% {
+    box-shadow:
+      0 0 25px #00ffff,
+      0 0 35px #00ffff inset;
+  }
+}
+
+@keyframes liquidMove {
+  0% {
+    transform: translate(0%, 0%) rotate(0deg);
+  }
+  50% {
+    transform: translate(25%, 25%) rotate(180deg);
+  }
+  100% {
+    transform: translate(0%, 0%) rotate(360deg);
+  }
+}
+
+/* Login heading */
+h2 {
+  font-size: 1.8rem;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+/* Input field */
+input[type="text"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #001f3f, #000814;
+  font-size: 1rem;
+  outline: none;
+  transition: 1.0s ease;
+}
+
+input[type="text"]::placeholder {
+  color: #aaa;
+}
+
+input[type="text"]:focus {
+  background-color: rgba(0, 191, 255, 0.1);
+  box-shadow: 0 0 10px #00bfff;
+}
+
+/* Neon-style button */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: transparent;
+  color: #00bfff;
+  border: 1px solid #00bfff;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 1.0s ease;
+}
+
+button:hover {
+  background-color: #00bfff;
+  color: #000;
+transition: 5.0s ease;
+box-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
+}
