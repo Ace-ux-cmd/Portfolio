@@ -11,10 +11,17 @@
     <h1 class="logo">𝓐</h1>
     <h2>Welcome,</h2>
     <form action="/submit" method="POST">
-      <input type="text" placeholder="Username" required />
-      <button type="submit">Login</button>
+      <input type="text" placeholder="Username" name="name" id="name" minlength="3" maxlength="7" required  />
+      <button type="submit" id="button">Login</button>
     </form>
   </div>
-  <script src="/js/main.js"></script>
+  <script>
+    const user= document.getElementById("name");
+    button.onclick=(event)=>{
+      if (Boolean(user.value)===true && user.value.length >= 3){
+      alert(`Welcome ${user.value}`)
+    }
+    }
+  </script>
 </body>
 </html>
