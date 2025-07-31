@@ -29,7 +29,6 @@ div {
   max-width: 400px;
 }
 
-/* Big '𝓐' logo */
 /* Small round logo */
 .logo {
   width: 80px;
@@ -145,6 +144,7 @@ input[type="text"] {
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.1);
   color: #001f3f, #000814;
+  text-shadow: 2px 5px 5px #4ac0ff;
   font-size: 1rem;
   outline: none;
   transition: 1.0s ease;
